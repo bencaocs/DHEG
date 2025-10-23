@@ -5,16 +5,7 @@
 
 ## 🚀 Features
 
-- **Graph Attention Mechanism (GAT):** Captures residue-level dependencies.
-- **Equivariant GNN (EGNN):** Models 3D structural coordinates of proteins.
-- **Graph Unet Module:** Enables hierarchical feature learning.
-- **MGNN Integration:** Multi-scale GNN for capturing local/global contexts.
-- **TSNE Visualization:** Embedding projection for model interpretability.
-
----
-
-## 📦 Project Structure
-
+Accurate prediction of protein-protein interaction sites (PPIS) is crucial for understanding biological processes, elucidating disease mechanisms, and accelerating drug discovery. Although graph neural network (GNN) methods have shown potential in this field, but current research is limited by the static integrate multi-view features and insufficient perception of 3D spatial geometric information. To address these issues, this paper proposes a \textbf{D}ynamic perception mechanism within a \textbf{H}ierarchical \textbf{E}(n)-equivariant \textbf{G}raph architecture (DHEG). Specially, DHEG introduces a dynamic feature importance perception mechanism that adaptively assigns weights to features groups based on contextual relevance, and a hierarchical gated architecture based on E(n)-equivariant graph neural networks that effectively captures protein 3D spatial structures while mitigating over-smoothing problems. The results demonstrate that DHEG achieves improvements in 11 of 13 key metrics, with an 8\% enhancement in MCC, indicating that DHEG not only predicts more interaction sites but also does so with higher reliability. Furthermore, case studies and visualization analyses show that DHEG can align with biological mechanism better, demonstrating interpretability and application potential. 
 
 ---
 
