@@ -8,10 +8,11 @@
 Accurate prediction of protein-protein interaction sites (PPIS) is crucial for understanding biological processes, elucidating disease mechanisms, and accelerating drug discovery. Although graph neural network (GNN) methods have shown potential in this field, but current research is limited by the static integrate multi-view features and insufficient perception of 3D spatial geometric information. To address these issues, this paper proposes a \textbf{D}ynamic perception mechanism within a \textbf{H}ierarchical \textbf{E}(n)-equivariant \textbf{G}raph architecture (DHEG). Specially, DHEG introduces a dynamic feature importance perception mechanism that adaptively assigns weights to features groups based on contextual relevance, and a hierarchical gated architecture based on E(n)-equivariant graph neural networks that effectively captures protein 3D spatial structures while mitigating over-smoothing problems. The results demonstrate that DHEG achieves improvements in 11 of 13 key metrics, with an 8\% enhancement in MCC, indicating that DHEG not only predicts more interaction sites but also does so with higher reliability. Furthermore, case studies and visualization analyses show that DHEG can align with biological mechanism better, demonstrating interpretability and application potential. 
 
 ---
+##  Introduction
+DHEG is a novel framework for protein-protein interaction site prediction using Dynamic perception mechanism within a Hierarchical E(n)-equivariant Graph architecture. DHEG introduces a dynamic feature perception mechanism that adaptively weights multiple protein features, based on their contextual relevance, overcoming the rigidity of static feature integration. Furthermore, leveraging the inherent geometric symmetry of 3D protein structures, DHEG incorporates an EGNN to construct a hierarchical gated architecture. This architecture utilizes graph attention pooling to establish hierarchical representations from graphs to subgraphs and enables cross-level information fusion through a gating mechanism, effectively capturing multi-scale spatial geometric features while mitigating over-smoothing issues. Comparative experiments demonstrate that DHEG significantly outperforms existing state-of-the-art (SOTA) methods, and its predicted interaction sites show strong agreement with experimentally determined interfaces. 
+ 
 
-### 📄 **requirements.txt**
-
-```txt
+## System requirement
 torch>=2.1.0
 torchvision>=0.16.0
 dgl>=1.1.2
@@ -22,4 +23,18 @@ matplotlib>=3.8.0
 einops>=0.8.0
 tqdm>=4.66.0
 pickle5>=0.0.12
+Software and database requirement
+To run the DHEG, you need to install the following three software and download the corresponding databases:
+BLAST+ [https://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/LATEST/] and UniRef90 [https://www.uniprot.org/downloads], run PSSM.py
+HH-suite [https://github.com/soedinglab/hh-suite] and Uniclust30 [https://uniclust.mmseqs.com/], run HMM.py
+DSSP [https://github.com/cmbi/dssp], run DSSP.py
+Run DHEG
+Python train.py
+Python test.py
+Notice: Replace the model path 
+
+
+## Others
+If you have any questions, please do not hesitate to connect us [bencaocs@gmail.com or xueleecs@gmail.com].
+
 
